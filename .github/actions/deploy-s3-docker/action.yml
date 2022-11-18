@@ -1,0 +1,19 @@
+name: 'Deploy to AWS S3 - Docker action'
+description: 'Deploy a static website to S3 - Docker action'
+inputs:
+  bucket:
+    description: 'S3 bucket name'
+    required: true
+  bucket-region:
+    description: 'S3 region'
+    required: false
+    default: 'eu-west-3'
+  dist-folder:
+    description: 'Folder containing deployable files'
+    required: true
+outputs:
+  website-url:
+    description: 'Address for the website'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
