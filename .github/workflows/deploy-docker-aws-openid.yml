@@ -1,4 +1,4 @@
-name: Deployment - Docker
+name: Deployment - Docker - AWS - OpenID
 on:
   push:
     branches:
